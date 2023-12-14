@@ -19,7 +19,7 @@ export const Holidays = () => {
     const goodFriday: NorwegianHoliday = {id: 3,name: "Langfredag", date: subtractDays(easterDayDate, 2)};
     const easterDay: NorwegianHoliday = {id: 4,name: "1. påskedag", date: easterDayDate}
     const secoundEasterDay: NorwegianHoliday = {id: 5,name: "2. påskedag", date: addDays(easterDayDate, 1)};
-    const laborDay: NorwegianHoliday = {id: 6,name: "Arbeidernes dag", date: new Date(currentYear, 4, 1)};
+    const laborDay: NorwegianHoliday = {id: 6,name: "Arbeidernes dag", date: new Date(currentYear, 4, 2)};
     const constitutionDay: NorwegianHoliday = {id: 7,name: "Grunnlovsdagen", date: new Date(currentYear, 4, 18)};
     const christsAscension: NorwegianHoliday = {id: 8,
         name: "Kristi Himmelfartsdag",
