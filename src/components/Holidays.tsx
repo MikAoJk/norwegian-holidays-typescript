@@ -50,26 +50,28 @@ export const Holidays = () => {
 
 
     return (
-        <div className="m-auto pb-5 ">
-            <table>
-                <tbody>
+        <div className="relative overflow-x-auto">
+            <table className="w-full text-sm text-left rtl:text-right ">
+                <thead className="text-m uppercase">
                 <tr>
-                    <th>Holiday name</th>
-                    <th>Holiday date</th>
+                    <th scope="col" className="px-6 py-3">Holiday name</th>
+                    <th scope="col" className="px-6 py-3">Holiday date(YYYY-mm-dd)</th>
                 </tr>
+                </thead>
+                <tbody>
                 {norwegianHolidays.map(norwegianHolidays =>
-                    <tr key={norwegianHolidays.id}>
-                        <td>
+                    <tr className="border-b dark:border-gray-700" key={norwegianHolidays.id}>
+                        <td className="px-6 py-4">
                             {norwegianHolidays.name}
                         </td>
-                        <td>
+                        <td className="px-6 py-4">
                             {norwegianHolidays.date.toISOString().substring(0, 10)}
                         </td>
                     </tr>
                 )}
                 </tbody>
             </table>
-        </div>
+          </div>
     );
 
 }
