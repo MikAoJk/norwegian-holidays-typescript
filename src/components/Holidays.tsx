@@ -14,7 +14,7 @@ export const Holidays = () => {
     const currentYear = new Date().getFullYear();
     const easterDayDate = getEasterDay(currentYear);
 
-    const firstNewYearsDay: NorwegianHoliday = {id: 1, name: "1. nyttårsdag", date: new Date(currentYear, 1, 1)};
+    const firstNewYearsDay: NorwegianHoliday = {id: 1, name: "1. nyttårsdag", date: new Date(currentYear, 0, 2)};
     const maundyThursday: NorwegianHoliday = {id: 2,name: "Skjærtorsdag", date: subtractDays(easterDayDate,3)};
     const goodFriday: NorwegianHoliday = {id: 3,name: "Langfredag", date: subtractDays(easterDayDate, 2)};
     const easterDay: NorwegianHoliday = {id: 4,name: "1. påskedag", date: easterDayDate}
@@ -71,20 +71,20 @@ export const Holidays = () => {
                 )}
                 </tbody>
             </table>
-          </div>
+        </div>
     );
 
 }
 
 
 const subtractDays = (date: Date, days: number) => {
-    const dateOffset = (24*60*60*1000) * days;
+    const dateOffset = (24 * 60 * 60 * 1000) * days;
     const newDate = new Date();
     newDate.setTime(date.getTime() - dateOffset);
     return newDate
 }
 const addDays = (date: Date, days: number) => {
-    const dateOffset = (24*60*60*1000) * days;
+    const dateOffset = (24 * 60 * 60 * 1000) * days;
     const newDate = new Date();
     newDate.setTime(date.getTime() + dateOffset);
     return newDate
@@ -105,8 +105,8 @@ const getEasterDay = (year: number) => {
     const l = (32 + 2 * e + 2 * i - h - k) % 7;
     const m = Math.floor((a + 11 * h + 22 * l) / 451);
 
-    const month = Math.floor((h + l + 7 * m + 114) / 31) - 1;
-    const day = month % 31 + 1;
+    const month = Math.floor((h + l - 7 * m + 114) / 31) -1;
+    const day = (((h + l - 7 * m + 114) % 31) + 1) + 1;
 
     return new Date(year, month, day);
 }
