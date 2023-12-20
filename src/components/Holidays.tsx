@@ -15,27 +15,29 @@ export const Holidays = () => {
     const easterDayDate = getEasterDay(currentYear);
 
     const firstNewYearsDay: NorwegianHoliday = {id: 1, name: "1. nyttårsdag", date: new Date(currentYear, 0, 2)};
-    const maundyThursday: NorwegianHoliday = {id: 2,name: "Skjærtorsdag", date: subtractDays(easterDayDate,3)};
-    const goodFriday: NorwegianHoliday = {id: 3,name: "Langfredag", date: subtractDays(easterDayDate, 2)};
-    const easterDay: NorwegianHoliday = {id: 4,name: "1. påskedag", date: easterDayDate}
-    const secoundEasterDay: NorwegianHoliday = {id: 5,name: "2. påskedag", date: addDays(easterDayDate, 1)};
-    const laborDay: NorwegianHoliday = {id: 6,name: "Arbeidernes dag", date: new Date(currentYear, 4, 2)};
-    const constitutionDay: NorwegianHoliday = {id: 7,name: "Grunnlovsdagen", date: new Date(currentYear, 4, 18)};
-    const christsAscension: NorwegianHoliday = {id: 8,
+    const palmsunday: NorwegianHoliday = {id: 2,name: "Palmesøndag", date: subtractDays(easterDayDate,7)};
+    const maundyThursday: NorwegianHoliday = {id: 3,name: "Skjærtorsdag", date: subtractDays(easterDayDate,3)};
+    const goodFriday: NorwegianHoliday = {id: 4,name: "Langfredag", date: subtractDays(easterDayDate, 2)};
+    const easterDay: NorwegianHoliday = {id: 5,name: "1. påskedag", date: easterDayDate}
+    const secoundEasterDay: NorwegianHoliday = {id: 6,name: "2. påskedag", date: addDays(easterDayDate, 1)};
+    const laborDay: NorwegianHoliday = {id: 7,name: "Arbeidernes dag", date: new Date(currentYear, 4, 2)};
+    const constitutionDay: NorwegianHoliday = {id: 8,name: "Grunnlovsdagen", date: new Date(currentYear, 4, 18)};
+    const christsAscension: NorwegianHoliday = {id: 9,
         name: "Kristi Himmelfartsdag",
         date: addDays(easterDayDate, 39)
     };
-    const firstdayOfPentecost: NorwegianHoliday = {id: 9,name: "1. pinsedag", date: addDays(easterDayDate, 49)};
-    const secounDayOfPentecost: NorwegianHoliday = {id: 10,
+    const firstdayOfPentecost: NorwegianHoliday = {id: 10,name: "1. pinsedag", date: addDays(easterDayDate, 49)};
+    const secounDayOfPentecost: NorwegianHoliday = {id: 11,
         name: "2. pinsedag",
         date: addDays(easterDayDate, 50)
     };
-    const firstofChristmas: NorwegianHoliday = {id: 11,name: "1. juledag", date: new Date(currentYear, 11, 25)};
-    const secounofChristmas: NorwegianHoliday = {id: 12,name: "2. juledag", date: new Date(currentYear, 11, 26)};
+    const firstofChristmas: NorwegianHoliday = {id: 12,name: "1. juledag", date: new Date(currentYear, 11, 25)};
+    const secounofChristmas: NorwegianHoliday = {id: 13,name: "2. juledag", date: new Date(currentYear, 11, 26)};
 
 
     const norwegianHolidays: NorwegianHoliday[] = [];
     norwegianHolidays.push(firstNewYearsDay)
+    norwegianHolidays.push(palmsunday)
     norwegianHolidays.push(maundyThursday)
     norwegianHolidays.push(goodFriday)
     norwegianHolidays.push(easterDay)
