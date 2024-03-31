@@ -29,4 +29,4 @@ bun run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Deployed to GitHub pages 
-The application is live at: https://mikaojk.github.io/paternity-leave-countdown
+The application is live at: https://mikaojk.github.io/norwegian-holidays-typescript
