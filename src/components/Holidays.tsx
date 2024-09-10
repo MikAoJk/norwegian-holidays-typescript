@@ -77,7 +77,7 @@ export const Holidays = () => {
 
     return (
         <div className="relative overflow-x-auto">
-            <a className="mr-2">Year</a>
+            <a className="mr-2">Year:</a>
             <button
                 className={showDropDown ? "active" : "mt-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mb-6"}
                 onClick={(): void => toggleDropDown()}
@@ -96,7 +96,7 @@ export const Holidays = () => {
                     />
                 )}
             </button>
-            <table className="w-full text-sm text-left rtl:text-right ">
+            <table className="w-full text-sm text-left rtl:text-right">
                 <thead className="text-m uppercase">
                 <tr>
                     <th scope="col" className="px-6 py-3">Holiday name</th>
