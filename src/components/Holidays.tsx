@@ -79,14 +79,15 @@ export const Holidays = () => {
         <div className="relative overflow-x-auto">
             <a>Year:</a>
             <button
-                className={showDropDown ? "mt-2 inline-flex" : "mt-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mb-16"}
+                className={showDropDown ? "mt-2 inline-flex" : "mt-2 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mb-20"}
                 onClick={(): void => toggleDropDown()}
                 onBlur={(e: React.FocusEvent<HTMLButtonElement>): void =>
                     dismissHandler(e)
                 }
 
             >
-                {!showDropDown && (<div>{selectYear}</div>)}
+                {!showDropDown && (<div>{selectYear}</div>)
+                }
                 {showDropDown && (
                     <DropDown
                         years={years()}
