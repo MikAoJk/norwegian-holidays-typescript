@@ -25,7 +25,7 @@ const DropDown = (dropDownProps: DropDownProps) => {
                 {dropDownProps.years
                     .map(year => {
                             return (
-                                <p className="block px-4 py-2 text-sm hover:bg-blue-800 rounded-md text-gray-700 dark:text-gray-200"
+                                <p className="flex-col px-4 py-2 text-sm hover:bg-blue-800 rounded-md text-gray-700 dark:text-gray-200"
                                    key={year}
                                    onClick={(): void => {
                                        onClickHandler(year);
