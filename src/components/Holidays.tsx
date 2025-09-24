@@ -136,7 +136,10 @@ const addDays = (date: Date, days: number) => {
     return newDate
 }
 
-
+    /*
+     * Meeus/Jones/Butchers algorithm (Gregorian calendar).
+     * see https://en.m.wikipedia.org/wiki/Date_of_Easter
+     */
 const getEasterDay = (year: number) => {
     const a = year % 19;
     const b = Math.floor(year / 100);
